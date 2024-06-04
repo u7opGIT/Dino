@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en" class="offline">
+<head>
+    <meta charset="utf-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#fff">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="apple-touch-icon" sizes="128x128" href="icons/icon-128.png">
+    <link rel="apple-touch-icon" sizes="256x256" href="icons/icon-256.png">
+    <title>Chrome Dino</title>
+    <link rel="stylesheet" href="styles/interstitial_core.css">
+    <link rel="stylesheet" href="styles/interstitial_common.css">
+    <link rel="stylesheet" href="styles/neterror.css">
+    <script src="scripts/neterror.slim.js"></script>
+    <script src="scripts/offline.js"></script>
+    <script src="scripts/offline-sprite-definitions.js"></script>
+    <link rel="manifest" href="appmanifest.json">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SX3SJWCLEY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SX3SJWCLEY');
+    </script>
+</head>
+<body id="t" class="neterror" style="font-size: 75%">
+    <div id="main-frame-error" class="interstitial-wrapper">
+        <div id="main-content">
+            <div class="icon icon-offline" style="visibility: hidden;"></div>
+            <div id="main-message">
+                <h1>
+                    <span id="heading.msg">Press HUY </span>
+                </h1>
+            </div>
+        </div>
+        <div role="application" tabindex="0" class="runner-container">
+            <canvas class="runner-canvas" width="552" height="150" style="width: 552px; height: 150px;"></canvas>
+            <span class="offline-runner-live-region" aria-live="assertive">Dino game. A pixelated dinosaur dodges cacti and pterodactyls as it runs across a desolate landscape. When you hear an audio cue, press space to jump over obstacles.</span>
+        </div>
+    </div>
+    <div id="sub-frame-error">
+        <!-- Show details when hovering over the icon, in case the details are
+            hidden because they're too large. -->
+        <div class="icon"></div>
+        <div id="sub-frame-error-details" jsselect="summary" jsvalues=".innerHTML:msg" style="display: none;"></div>
+    </div>
+    <div id="offline-resources">
+        <img id="offline-resources-1x" src="images/default_100_percent/offline/100-offline-sprite.png">
+        <img id="offline-resources-2x" src="images/default_200_percent/offline/200-offline-sprite.png">
+        <template id="audio-resources">
+            <!-- Audio elements have been removed -->
+        </template>
+    </div>
+    <script src="scripts/load_time_data.js"></script>
+    <script src="scripts/strings.js"></script>
+    <script>
+        function is_touch_enabled() {
+            return ( 'ontouchstart' in window ) || 
+                   ( navigator.maxTouchPoints > 0 ) ||
+                   ( navigator.msMaxTouchPoints > 0 );
+        }
+        if ( is_touch_enabled() ) {
+            var box = document.getElementById("heading.msg");
+            box.innerHTML = "Touch the dino to play!!!!";
+        }
+    </script>
+    <script src="register-sw.js"></script>
+
+    <li><a href = "index2.html">Klick</a></li>
+</body>
+</html>
