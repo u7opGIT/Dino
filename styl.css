@@ -1,3 +1,7 @@
+.container {
+            display: flex;
+        }
+
 .block_1 {
 
 	padding-left: 650px ;
