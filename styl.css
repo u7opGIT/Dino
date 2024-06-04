@@ -1,8 +1,12 @@
+.container {
+            display: flex;
+        }
+
 .block_1 {
 
 	padding-left: 400px ;
 	padding-top: px;
-	float: left; width: 5%;
+	float: left; width: 1%;
 }
 
 
