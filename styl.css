@@ -1,21 +1,7 @@
-.container {
-            display: flex;
-        }
+.conteiner{
 
-.block_1 {
-	padding-top:  500px;
-	padding-left: px ;
-	padding-top: px;
-	float: left; width: 30%;
+	display: flex; 
 }
-
-.block_2 {
-
-	padding-top: 300px;
-	float: left; width: 30%;
-
-}
-
 
 .card-container {
     display: flex;
