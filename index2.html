@@ -66,19 +66,22 @@
             transform: translateY(-20px); /* активна кнопка піднята ще вище */
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.7);
         }
+        .button:active {
+            background-color: #606060; /* змінюється колір при натисканні */
+        }
     </style>
     <title>Button Layout</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="button-container">
-            <button class="button active" onclick="window.location.href='index.html';">
+            <button class="button" onclick="window.location.href='index.html';">
                 <img src="dino_ico.png" alt="Button Image 1">
             </button>
             <button class="button" onclick="window.location.href='index3.html';">
                 <img src="acsion.png" alt="Button Image 2">
             </button>
-            <button class="button" onclick="window.location.href='index2.html';">
+            <button class="button active" onclick="window.location.href='index2.html';">
                 <img src="image.png" alt="Button Image 3">
             </button>
         </div>

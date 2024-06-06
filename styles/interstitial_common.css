@@ -30,12 +30,6 @@ button {
 .pdf button,
 .ssl button,
 .safe-browsing-billing button {
-  background: var(--primary-button-fill-color);
-}
-
-button:active {
-  background: var(--primary-button-fill-color-active);
-  outline: 0;
 }
 
 #debugging {
