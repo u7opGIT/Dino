@@ -35,6 +35,63 @@
             </div>
         </div>
     </div>
+
+
+
+    <style>
+        .wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            height: 100vh;
+            position: relative;
+        }
+        .button-container {
+            display: flex;
+            gap: 20px;
+            position: absolute;
+            bottom: 0px; /* відступ від низу */
+        }
+        .button {
+            width: 100px;
+            height: 100px;
+            padding: 0;
+            border: none;
+            background: none; /* прибираємо фон кнопки */
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px; /* округлі краї для краси */
+        }
+        .button:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.5);
+        }
+        .button.active {
+            transform: translateY(-20px); /* активна кнопка піднята ще вище */
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.7);
+        }
+    </style>
+    <title>Button Layout</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="button-container">
+            <button class="button active" onclick="window.location.href='index.html';">
+                <img src="dino_ico.png" alt="Button Image 1">
+            </button>
+            <button class="button" onclick="window.location.href='index3.html';">
+                <img src="acsion.png" alt="Button Image 2">
+            </button>
+            <button class="button" onclick="window.location.href='index2.html';">
+                <img src="image.png" alt="Button Image 3">
+            </button>
+        </div>
+    </div>
 </body>
 
 

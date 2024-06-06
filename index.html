@@ -92,19 +92,19 @@
  -->
 
 
-         <!-- <style>
-        body {
-            background-color: #2D2D2D; /* темний фон */
+         <style>
+        .wrapper {
             display: flex;
             justify-content: center;
-            align-items: flex-end; /* вирівнюємо по центру знизу */
+            align-items: flex-end;
             height: 100vh;
-            margin: 0;
+            position: relative;
         }
         .button-container {
             display: flex;
             gap: 20px;
-            padding-bottom: 20px; /* відступ від низу */
+            position: absolute;
+            bottom: 0px; /* відступ від низу */
         }
         .button {
             width: 100px;
@@ -130,14 +130,22 @@
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.7);
         }
     </style>
-    <title>Button</title>
+    <title>Button Layout</title>
 </head>
 <body>
-     <div class="button-container">
-        <button class="button Dino" onclick="window.location.href='index.html';"><img src="dino_ico.png" alt="Image game dino"></button>
-        <button class="button athivment" onclick="window.location.href='index3.html';"><img src="acsion.png" alt="Image athivment"></button>
-        <button class="button referal" onclick="window.location.href='index2.html';"><img src="image.png" alt="Image referal"></button>
-    </div> -->
+    <div class="wrapper">
+        <div class="button-container">
+            <button class="button active" onclick="window.location.href='index.html';">
+                <img src="dino_ico.png" alt="Button Image 1">
+            </button>
+            <button class="button" onclick="window.location.href='index3.html';">
+                <img src="acsion.png" alt="Button Image 2">
+            </button>
+            <button class="button" onclick="window.location.href='index2.html';">
+                <img src="image.png" alt="Button Image 3">
+            </button>
+        </div>
+    </div>
 
     <!-- <div class="button-container">
         <button class="button active" onclick="window.location.href='index.html';">
