@@ -424,6 +424,6 @@ html[dir='rtl'].offline .icon-offline {
 
   .slow-speed-option [type=checkbox]:checked + .slow-speed-toggle::after,
   .slow-speed-option [type=checkbox]:checked + .slow-speed-toggle::before {
-    background: var(--google-blue-300);
+/*    background: var(--google-blue-300);*/
   }
 }
