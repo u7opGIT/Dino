@@ -52,7 +52,7 @@
             display: flex;
             gap: 20px;
             position: absolute;
-            bottom: 0px; /* відступ від низу */
+            bottom: 600px; /* відступ від низу */
         }
         .button {
             width: 100px;
@@ -76,6 +76,9 @@
         .button.active {
             transform: translateY(-20px); /* активна кнопка піднята ще вище */
             box-shadow: 0 10px 20px rgba(255, 255, 255, 0.7);
+        }
+        .button:active {
+            background-color: #606060; /* змінюється колір при натисканні */
         }
     </style>
     <title>Button Layout</title>
