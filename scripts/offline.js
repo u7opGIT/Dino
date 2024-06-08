@@ -522,12 +522,12 @@ Runner.prototype = {
         this.debounceResize.bind(this));
 
     // Handle dark mode
-    const darkModeMediaQuery =
-        window.matchMedia('(prefers-color-scheme: dark)');
-    this.isDarkMode = darkModeMediaQuery && darkModeMediaQuery.matches;
-    darkModeMediaQuery.addListener((e) => {
-      this.isDarkMode = e.matches;
-    });
+    // const darkModeMediaQuery =
+    //     window.matchMedia('(prefers-color-scheme: dark)');
+    // this.isDarkMode = darkModeMediaQuery && darkModeMediaQuery.matches;
+    // darkModeMediaQuery.addListener((e) => {
+    //   this.isDarkMode = e.matches;
+    // });
   },
 
   /**
