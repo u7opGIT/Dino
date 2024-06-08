@@ -814,28 +814,28 @@ Runner.prototype = {
       }
 
       // Night mode.
-      if (!Runner.isAltGameModeEnabled()) {
-        if (this.invertTimer > this.config.INVERT_FADE_DURATION) {
-          this.invertTimer = 0;
-          this.invertTrigger = false;
-          this.invert(false);
-        } else if (this.invertTimer) {
-          this.invertTimer += deltaTime;
-        } else {
-          const actualDistance =
-              this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
+      // if (!Runner.isAltGameModeEnabled()) {
+      //   if (this.invertTimer > this.config.INVERT_FADE_DURATION) {
+      //     this.invertTimer = 0;
+      //     this.invertTrigger = false;
+      //     this.invert(false);
+      //   } else if (this.invertTimer) {
+      //     this.invertTimer += deltaTime;
+      //   } else {
+      //     const actualDistance =
+      //         this.distanceMeter.getActualDistance(Math.ceil(this.distanceRan));
 
-          if (actualDistance > 0) {
-            this.invertTrigger =
-                !(actualDistance % this.config.INVERT_DISTANCE);
+      //     if (actualDistance > 0) {
+      //       this.invertTrigger =
+      //           !(actualDistance % this.config.INVERT_DISTANCE);
 
-            if (this.invertTrigger && this.invertTimer === 0) {
-              this.invertTimer += deltaTime;
-              this.invert(false);
-            }
-          }
-        }
-      }
+      //       if (this.invertTrigger && this.invertTimer === 0) {
+      //         this.invertTimer += deltaTime;
+      //         this.invert(false);
+      //       }
+      //     }
+      //   }
+      // }
     }
 
     if (this.playing || (!this.activated &&
@@ -1469,19 +1469,19 @@ Runner.prototype = {
    * Inverts the current page / canvas colors.
    * @param {boolean} reset Whether to reset colors.
    */
-  invert(reset) {
-    const htmlEl = document.firstElementChild;
+  // invert(reset) {
+  //   const htmlEl = document.firstElementChild;
 
-    if (reset) {
-      htmlEl.classList.toggle(Runner.classes.INVERTED,
-          false);
-      this.invertTimer = 0;
-      this.inverted = false;
-    } else {
-      this.inverted = htmlEl.classList.toggle(
-          Runner.classes.INVERTED, this.invertTrigger);
-    }
-  },
+  //   if (reset) {
+  //     htmlEl.classList.toggle(Runner.classes.INVERTED,
+  //         false);
+  //     this.invertTimer = 0;
+  //     this.inverted = false;
+  //   } else {
+  //     this.inverted = htmlEl.classList.toggle(
+  //         Runner.classes.INVERTED, this.invertTrigger);
+  //   }
+  // },
 };
 
 
@@ -2556,7 +2556,7 @@ Trex.prototype = {
     this.draw(0, 0);
     this.update(0, Trex.status.WAITING);
   },
-
+ 
   /**
    * Assign the appropriate jump parameters based on the game speed.
    */
