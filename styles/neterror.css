@@ -64,14 +64,14 @@ html[dir='rtl'].offline .icon-offline {
   display: none;
 }
 
-.offline.inverted {
+/*.offline.inverted {
   background-color: #dfdedb; /* --google-gray-900 inverted value */
-  filter: invert(1);
-}
+  /*filter: invert(1);
+}*/
 
-.offline.inverted body {
+/*.offline.inverted body {
   background-color: #dfdedb;
-}
+}*/
 
 .offline .interstitial-wrapper {
   color: var(--text-color);
